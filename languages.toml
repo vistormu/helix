@@ -1,0 +1,66 @@
+# ======
+# python
+# ======
+[[language]]
+name = "python"
+language-servers = ["ruff"]
+formatter = { command = "autopep8", args = ["-", "--max-length=200"] }
+auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+# ==
+# go
+# ==
+[[language]]
+name = "go"
+roots = ["go.work", "go.mod"]
+language-servers = ["gopls"]
+formatter = { command = "goimports" }
+
+[language-server.gopls]
+command = "gopls"
+
+# ===
+# lua
+# ===
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"]
+formatter = { command = "stylua", args = ["-"] }
+
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+[language-server.lua-language-server.config.Lua]
+runtime.version = "LuaJIT"
+diagnostics.globals = ["love"]
+workspace.library = ["${3rd}/love2d/library"]
+workspace.checkThirdParty = false
+
+# =======
+# proxima
+# =======
+[[language]]
+name = "proxima"
+scope = "source.prox"
+file-types = ["prox"]
+comment-tokens = "#"
+language-servers = ["harper-ls"]
+
+[[grammar]]
+name = "proxima"
+source = { git = "https://github.com/vistormu/tree-sitter-proxima" , rev = "38738f3394b21d252c387c302596ea97517efe7e" }
+
+# ========
+# markdown
+# ========
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "harper-ls"]
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]

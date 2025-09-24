@@ -1,0 +1,56 @@
+theme = "vistor"
+
+[editor]
+scrolloff = 8
+mouse = true
+middle-click-paste = false
+scroll-lines = 3
+shell = ["sh", "-c"]
+line-number = "relative"
+cursorline = false
+cursorcolumn = false
+continue-comments = true
+auto-completion = true
+path-completion = true
+auto-format = true
+idle-timeout = 250
+completion-timeout = 250
+preview-completion-insert = true
+completion-trigger-len = 2
+completion-replace = false
+auto-info = true
+true-color = false
+undercurl = false
+rulers = []
+bufferline = "never"
+color-modes = false
+text-width = 80
+workspace-lsp-roots = []
+default-line-ending = "native"
+insert-final-newline = true
+atomic-save = true
+trim-final-newlines = false
+trim-trailing-whitespace = false
+popup-border = "none"
+indent-heuristic = "hybrid"
+end-of-line-diagnostics = "disable"
+editor-config = true
+
+[editor.statusline]
+left = ["mode", "file-name", "file-modification-indicator", "spinner"]
+center = ["read-only-indicator", "diagnostics"]
+right = ["position-percentage", "file-type"]
+separator = "│"
+mode.normal = "normal"
+mode.insert = "insert"
+mode.select = "select"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.soft-wrap]
+enable = true

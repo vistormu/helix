@@ -1,0 +1,6 @@
+inherits = "gruvbox-material"
+
+
+"ui.statusline.normal" = { fg = "black", bg = "red" }
+"ui.statusline.insert" = { fg = "black", bg = "blue" }
+"ui.statusline.select" = { fg = "black", bg = "green" }
