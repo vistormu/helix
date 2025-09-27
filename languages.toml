@@ -3,7 +3,7 @@
 # ======
 [[language]]
 name = "python"
-language-servers = ["ruff"]
+language-servers = ["pyright", "ruff"]
 formatter = { command = "autopep8", args = ["-", "--max-length=200"] }
 auto-format = true
 
@@ -18,7 +18,7 @@ args = ["server"]
 name = "go"
 roots = ["go.work", "go.mod"]
 language-servers = ["gopls"]
-formatter = { command = "goimports" }
+formatter = { command = "gofmt" }
 
 [language-server.gopls]
 command = "gopls"
