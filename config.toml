@@ -28,3 +28,6 @@ enable = true
 
 [keys.normal]
 "X" = "select_line_above"
+
+[keys.normal.g]
+"v" = ["vsplit", "goto_definition"] # go to definition in a vertical split

@@ -1,3 +1,11 @@
+# =====
+# spell
+# =====
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+config = { harper-ls = { diagnosticSeverity = "error", linters = { long_sentences = false } } }
+
 # ======
 # python
 # ======
@@ -60,7 +68,3 @@ source = { git = "https://github.com/vistormu/tree-sitter-proxima" , rev = "3873
 [[language]]
 name = "markdown"
 language-servers = ["marksman", "harper-ls"]
-
-[language-server.harper-ls]
-command = "harper-ls"
-args = ["--stdio"]
